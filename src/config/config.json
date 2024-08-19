@@ -1,4 +1,1 @@
-{
-    "targetTemperature": 80,
-    "targetHumidity": 0.7
-}
+{'targetTemperature': 100, 'targetHumidity': 0.5}
