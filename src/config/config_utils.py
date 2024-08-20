@@ -1,6 +1,8 @@
 import json
+import pathlib
 
-CONFIG_FILE_PATH="/home/pi/smart-greenhouse/src/config/config.json"
+# Dynamically grab the file path, works on both Linux and Windows
+CONFIG_FILE_PATH = pathlib.Path("src/config/") / "config.json"
 
 def get_config_file():
     with open(CONFIG_FILE_PATH, "r") as config_file:
@@ -8,7 +10,8 @@ def get_config_file():
         config_file.close()
         return data
 
-def update_config_file(json):
+def update_config_file(json_dict):
     with open(CONFIG_FILE_PATH, "w") as config_file:
-        config_file.write(str(json))
+        json.dump(json_dict, config_file)
         return True
+    return False
