@@ -2,7 +2,7 @@ import json
 import pathlib
 
 # Dynamically grab the file path, works on both Linux and Windows
-CONFIG_FILE_PATH = pathlib.Path("src/config/") / "config.json"
+CONFIG_FILE_PATH = pathlib.Path("src/resources/") / "config.json"
 
 def get_config_file():
     with open(CONFIG_FILE_PATH, "r") as config_file:

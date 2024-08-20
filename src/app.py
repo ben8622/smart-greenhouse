@@ -1,16 +1,14 @@
 from flask import Flask, request, render_template
-import pathlib
-import json
-from .config.config_utils import get_config_file, update_config_file
+from services.config_service import get_config_file, update_config_file
 
 # Dynamically grab the file path, works on both Linux and Windows
-INDEX_HTML_FILE_PATH = pathlib.Path("src/html/") / "index.html"
+INDEX_HTML_FILE_PATH = "index.html"
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template(INDEX_HTML_FILE_PATH)
 
 @app.route("/config", methods=['GET'])
 def get_config():
