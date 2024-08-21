@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+   <h1>Smart Greenhouse</h1>
+  
+  <h2>Configurations</h2>
+  <form name="configurations" id="configurations-form" method="post" >
+    {% for key, value in config.items(): %}
+      <div>
+        <label>{{key}}:</label>
+        <input type="text" name={{key}} value={{value}}>
+      </div>
+    {% endfor %}
+    <div>
+      <button id="config-submit-btn">Update Configurations</button>
+    </div>
+  </form>
+
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
