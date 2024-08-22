@@ -18,12 +18,40 @@
 </head>
 
 <body>
+   <h1>Smart Greenhouse</h1>
 
-  <!-- Add your site or application content here -->
-   <h1>Header One</h1>
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+   <h2>Metrics</h2>
+   <table>
+    <thead>
+      <th scope="col">Measurement</th>
+      <th scope="col">Average Reading</th>
+      <th scope="col">Last Reading</th>
+      <th scope="col">Updated At</th>
+    </thead>
+    <tbody>
+      {% for metric in metrics: %}
+      <tr>
+        <th scope="row">{{metric.measurement}}</th>
+        <td>{{metric.averageReading}}</td>
+        <td>{{metric.lastReading}}</td>
+        <td>{{metric.updatedAt}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+   </table>
+  
+  <h2>Configurations</h2>
+  <form name="configurations" id="configurations-form" method="post" >
+    {% for key, value in config.items(): %}
+      <div>
+        <label>{{key}}:</label>
+        <input type="text" name={{key}} value={{value}}>
+      </div>
+    {% endfor %}
+      <button id="config-submit-btn">Update Configurations</button>
+  </form>
+
   <script src="{{ url_for('static', filename='index.js') }}"></script>
-
 </body>
 
 </html>

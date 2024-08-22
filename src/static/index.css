@@ -1,3 +1,36 @@
 h1 {
-    color: blue;
+    color: darkgreen;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    letter-spacing: 1px;
+}
+
+thead, tfoot {
+    background-color: lightgreen;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: .5em .75em;
+}
+ 
+tbody > tr:nth-of-type(even) {
+    background-color: #e6fae3;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+form > div:nth-of-type(odd) {
+    background-color: #faf9e3;
+}
+
+form > div:nth-of-type(even) {
+    background-color: #e6fae3;
 }
