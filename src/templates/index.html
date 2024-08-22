@@ -19,6 +19,36 @@
 
 <body>
    <h1>Smart Greenhouse</h1>
+
+   <h2>Metrics</h2>
+   <table>
+    <thead>
+      <th scope="col">Measurement</th>
+      <th scope="col">Average Reading</th>
+      <th scope="col">Last Reading</th>
+      <th scope="col">Updated At</th>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Temperature</th>
+        <td>79</td>
+        <td>82</td>
+        <td>2024-08-22T01:00:00</td>
+      </tr>
+      <tr>
+        <th scope="row">Humidity</th>
+        <td>0.432</td>
+        <td>0.511</td>
+        <td>2024-08-22T01:00:00</td>
+      </tr>
+      <tr>
+        <th scope="row">CO2</th>
+        <td>0.432</td>
+        <td>0.511</td>
+        <td>2024-08-22T01:00:00</td>
+      </tr>
+    </tbody>
+   </table>
   
   <h2>Configurations</h2>
   <form name="configurations" id="configurations-form" method="post" >
@@ -28,9 +58,7 @@
         <input type="text" name={{key}} value={{value}}>
       </div>
     {% endfor %}
-    <div>
       <button id="config-submit-btn">Update Configurations</button>
-    </div>
   </form>
 
   <script src="{{ url_for('static', filename='index.js') }}"></script>

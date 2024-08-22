@@ -1,3 +1,77 @@
 h1 {
-    color: green;
+    color: darkgreen;
 }
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    letter-spacing: 1px;
+}
+
+thead, tfoot {
+    background-color: lightgreen;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: .5em .75em;
+}
+ 
+tbody > tr:nth-of-type(even) {
+    background-color: #e6fae3;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+form > div:nth-of-type(odd) {
+    background-color: #faf9e3;
+}
+
+form > div:nth-of-type(even) {
+    background-color: #e6fae3;
+}
+
+
+
+
+
+
+
+/* table {
+    border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+} */
