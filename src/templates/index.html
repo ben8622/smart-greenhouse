@@ -29,24 +29,14 @@
       <th scope="col">Updated At</th>
     </thead>
     <tbody>
+      {% for metric in metrics: %}
       <tr>
-        <th scope="row">Temperature</th>
-        <td>79</td>
-        <td>82</td>
-        <td>2024-08-22T01:00:00</td>
+        <th scope="row">{{metric.measurement}}</th>
+        <td>{{metric.averageReading}}</td>
+        <td>{{metric.lastReading}}</td>
+        <td>{{metric.updatedAt}}</td>
       </tr>
-      <tr>
-        <th scope="row">Humidity</th>
-        <td>0.432</td>
-        <td>0.511</td>
-        <td>2024-08-22T01:00:00</td>
-      </tr>
-      <tr>
-        <th scope="row">CO2</th>
-        <td>0.432</td>
-        <td>0.511</td>
-        <td>2024-08-22T01:00:00</td>
-      </tr>
+    {% endfor %}
     </tbody>
    </table>
   
