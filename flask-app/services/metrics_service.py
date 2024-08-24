@@ -2,7 +2,7 @@ import json
 import pathlib
 
 # Dynamically grab the file path, works on both Linux and Windows
-METRICS_FILE_PATH = pathlib.Path("src/resources/") / "metrics.json"
+METRICS_FILE_PATH = pathlib.Path("flask-app/resources/") / "metrics.json"
 
 def get_metrics_file():
     with open(METRICS_FILE_PATH, "r") as metrics_file:
